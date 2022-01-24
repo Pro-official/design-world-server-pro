@@ -1,7 +1,6 @@
 {
   "name": "design-world-server-pro",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -16,5 +15,15 @@
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
     "mongodb": "^4.3.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pro-official/design-world-server-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pro-official/design-world-server-pro/issues"
+  },
+  "homepage": "https://github.com/Pro-official/design-world-server-pro#readme",
+  "description": ""
 }
