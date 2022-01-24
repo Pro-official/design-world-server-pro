@@ -16,8 +16,8 @@ app.use(express.json());
 // });
 
 // Environment Variables
-const dbUser = "debojoti";
-const dbPassword = "BS7W9XortGhRq8lP";
+const dbUser = process.env.USER;
+const dbPassword = process.env.PASS;
 const uri = `mongodb+srv://${dbUser}:${dbPassword}@cluster0.ocykb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
