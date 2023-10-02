@@ -4,39 +4,20 @@ const cors = require("cors");
 require("dotenv").config();
 const { MongoClient } = require("mongodb");
 const ObjectId = require("mongodb").ObjectId;
-// import token from "./world-design-official-firebase-adminsdk.json";
 
 const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// var serviceAccount = require(`./new.json`);
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-// });
-
 // Environment Variables
-const dbUser = process.env.USER;
-const dbPassword = process.env.PASS;
-const uri = `mongodb+srv://${dbUser}:${dbPassword}@cluster0.ocykb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const dbUser = process.env.DBUser;
+const dbPassword = process.env.DBPassword;
+const uri = `mongodb+srv://${dbUser}:${dbPassword}@cluster0.qmcox.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
-// async function verifyToken(req, res, next) {
-//   if (req.headers?.authorization?.startsWith("Bearer ")) {
-//     const token = req.headers.authorization.split(" ")[1];
-
-//     try {
-//       const decodedUser = await admin.auth().verifyIdToken(token);
-//       req.decodedEmail = decodedUser.email;
-//       // console.log(req.decodedEmail);
-//     } catch {}
-//   }
-//   next();
-// }
 
 async function run() {
   try {
